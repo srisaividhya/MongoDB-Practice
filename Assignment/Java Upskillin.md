@@ -2,7 +2,7 @@
 query the movies collection to**
 
 1. get all documents
-db.movies.find().pretty()
+`db.movies.find().pretty()`
 
 2. get all documents with writer set to "Quentin Tarantino"
  db.movies.find({writer: 'Quentin Tarantino'})
