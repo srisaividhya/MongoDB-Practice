@@ -1,5 +1,5 @@
-Query / Find Documents
-query the movies collection to
+**Query / Find Documents
+query the movies collection to**
 
 1. get all documents
 db.movies.find().pretty()
