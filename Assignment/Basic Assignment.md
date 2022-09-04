@@ -24,7 +24,7 @@ query the movies collection to
 6. get all movies released before the year 2000 or after 2010
 
 `db.movies.find({$or:[{year:{$gt:2010}},{year:{$lt:2000}}]})`
-
+------------------------------------------------------------------------
 
 ***Update Documents***
 1. add a synopsis to "The Hobbit: An Unexpected Journey" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."
