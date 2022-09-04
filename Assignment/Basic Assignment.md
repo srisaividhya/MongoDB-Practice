@@ -88,7 +88,7 @@ username : ScumbagSteve full_name : first : "Scumbag" last : "Steve"
 
 `db.users.insertOne({username":"ScumbagSteve","full_name":{"first":"Scumbag","last":"Steve"}})`
 
-
+-----------------------------------------------------------------------------------------------------
 
 **Insert the following documents into a posts collection **
 
@@ -118,6 +118,7 @@ username : ScumbagSteve title : Forks your repo on github body : Sets to private
 
 `db.posts.insertOne({ username: "ScumbagSteve", title: 'Forks your repo on github', body: "Sets to private" })`
 
+---------------------------------------------------------------------------------------------------------
 
 **Insert the following documents into a comments collection**
 
@@ -150,6 +151,7 @@ where [post_obj_id] is the ObjectId of the posts document: "Reports a bug in you
 
 `db.comments.insertOne({ username: "ScumbagSteve", comment: "Denied your PR cause i found a hack", post:ObjectId("6314c13a056b571fd1160cd2") })
 `
+
 ----------------------------------------------------------------------------------------------------------------------
 
 ***Querying related collections***
