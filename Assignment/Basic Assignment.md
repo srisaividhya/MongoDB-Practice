@@ -1,4 +1,4 @@
-**Query / Find Documents**
+***Query / Find Documents***
 query the movies collection to
 
 1. get all documents
@@ -25,8 +25,8 @@ query the movies collection to
 
 `db.movies.find({$or:[{year:{$gt:2010}},{year:{$lt:2000}}]})`
 
-**
-Update Documents**
+***
+Update Documents***
 1. add a synopsis to "The Hobbit: An Unexpected Journey" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."
 
 `db.movies.update({title:'The Hobbit: An Unexpected Journey'}, {$set:{synopsis:'A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.'}})`
@@ -39,8 +39,8 @@ Update Documents**
 
  `db.movies.updateOne({title: 'Pulp Fiction'}, {$push:{actors:'Samuel L. Jackson'}})`
  
- **
- Text Search**
+ ***
+ Text Search***
 1. find all movies that have a synopsis that contains the word "Bilbo"
 
 `db.movies.find({synopsis: {$regex: 'Bilbo'}})`
@@ -61,7 +61,7 @@ Update Documents**
 
 `db.movies.find({$and:[{synopsis:{$regex: 'gold'}},{synopsis:{$regex:'dragon'}}]})`
 
-Delete Documents
+***Delete Documents***
 1. delete the movie "Pee Wee Herman's Big Adventure"
 
 `db.movies.deleteOne({title:'Pee Wee Hermans Big Adventure'})`
@@ -70,7 +70,9 @@ Delete Documents
 
 `db.movies.deleteOne({title:'Avatar'})`
 
-**Relationships**
+
+
+***Relationships***
 
 Insert the following documents into a users collection 
 username : GoodGuyGreg first_name : "Good Guy" last_name : "Greg" 
@@ -142,8 +144,8 @@ where [post_obj_id] is the ObjectId of the posts document: "Reports a bug in you
 
 `db.comments.insertOne({ username: "ScumbagSteve", comment: "Denied your PR cause i found a hack", post:ObjectId("6314c13a056b571fd1160cd2") })
 `
-**
-Querying related collections**
+***
+Querying related collections***
 1. find all users
 
 `db.users.find().pretty()`
