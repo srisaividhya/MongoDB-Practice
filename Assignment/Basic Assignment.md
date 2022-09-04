@@ -1,4 +1,4 @@
-***Query / Find Documents***
+######Query / Find Documents
 query the movies collection to
 
 1. get all documents
