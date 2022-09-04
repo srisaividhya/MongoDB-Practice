@@ -25,8 +25,8 @@ query the movies collection to
 
 `db.movies.find({$or:[{year:{$gt:2010}},{year:{$lt:2000}}]})`
 
-***
-Update Documents***
+
+***Update Documents***
 1. add a synopsis to "The Hobbit: An Unexpected Journey" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."
 
 `db.movies.update({title:'The Hobbit: An Unexpected Journey'}, {$set:{synopsis:'A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.'}})`
@@ -84,6 +84,7 @@ username : GoodGuyGreg first_name : "Good Guy" last_name : "Greg"
 username : ScumbagSteve full_name : first : "Scumbag" last : "Steve"
 
 `db.users.insertOne({username":"ScumbagSteve","full_name":{"first":"Scumbag","last":"Steve"}})`
+
 
 
 **Insert the following documents into a posts collection **
@@ -146,8 +147,9 @@ where [post_obj_id] is the ObjectId of the posts document: "Reports a bug in you
 
 `db.comments.insertOne({ username: "ScumbagSteve", comment: "Denied your PR cause i found a hack", post:ObjectId("6314c13a056b571fd1160cd2") })
 `
-***
-Querying related collections***
+
+
+***Querying related collections***
 1. find all users
 
 `db.users.find().pretty()`
