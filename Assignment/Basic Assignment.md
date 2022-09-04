@@ -35,12 +35,13 @@ Update Documents***
 
 `db.movies.update({title:'The Hobbit: The Desolation of Smaug'}, {$set:{synopsis:'The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.'}})
 `
+
 3. add an actor named "Samuel L. Jackson" to the movie "Pulp Fiction"
 
  `db.movies.updateOne({title: 'Pulp Fiction'}, {$push:{actors:'Samuel L. Jackson'}})`
  
- ***
- Text Search***
+
+ ***Text Search***
 1. find all movies that have a synopsis that contains the word "Bilbo"
 
 `db.movies.find({synopsis: {$regex: 'Bilbo'}})`
@@ -60,6 +61,7 @@ Update Documents***
 5. find all movies that have a synopsis that contains the word "gold" and "dragon"
 
 `db.movies.find({$and:[{synopsis:{$regex: 'gold'}},{synopsis:{$regex:'dragon'}}]})`
+
 
 ***Delete Documents***
 1. delete the movie "Pee Wee Herman's Big Adventure"
