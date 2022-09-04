@@ -80,6 +80,7 @@ query the movies collection to
 ***Relationships***
 
 **Insert the following documents into a users collection** 
+
 username : GoodGuyGreg first_name : "Good Guy" last_name : "Greg" 
 
 `db.users.insertOne({username:"GoodGuyGreg",first_name:"Good Guy",last_name:"Greg"})`
@@ -90,7 +91,7 @@ username : ScumbagSteve full_name : first : "Scumbag" last : "Steve"
 
 -----------------------------------------------------------------------------------------------------
 
-**Insert the following documents into a posts collection **
+**Insert the following documents into a posts collection**
 
 username : GoodGuyGreg title : Passes out at party body : Wakes up early and cleans house
 
